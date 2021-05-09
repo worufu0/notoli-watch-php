@@ -1,0 +1,119 @@
+.custom-control-label::after,
+.custom-control-label::before {
+  top: 0.15rem !important;
+}
+.dropzone {
+  padding: 8px;
+}
+.dropzone .dz-preview {
+  margin: 10px;
+}
+
+/* Phần CSS ảnh đại diện sản phẩm */
+
+.avatar-wrapper {
+  border: 2px dashed #e1e8ee;
+  position: relative;
+  width: 100%;
+  /* margin: 50px auto; */
+  overflow: hidden;
+  /* box-shadow: 1px 1px 15px -5px black; */
+  /* transition: all 0.3s ease; */
+}
+.avatar-wrapper:hover {
+  /* transform: scale(1.05); */
+  cursor: pointer;
+}
+.avatar-wrapper:hover .profile-pic {
+  opacity: 0.5;
+}
+.avatar-wrapper .profile-pic {
+  height: 100%;
+  width: 100%;
+  /* transition: all 0.3s ease; */
+}
+/* .avatar-wrapper .profile-pic:after {
+  font-family: FontAwesome;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 190px;
+  background: #ecf0f1;
+  color: #34495e;
+  text-align: center;
+} */
+.avatar-wrapper {
+  background-color: #ffffff;
+}
+.avatar-wrapper .upload-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.avatar-wrapper .upload-button .fa-arrow-circle-up {
+  position: absolute;
+  font-size: 234px;
+  top: -17px;
+  left: 0;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #34495e;
+}
+.avatar-wrapper .upload-button:hover .fa-arrow-circle-up {
+  opacity: 0.9;
+}
+.file-upload {
+  display: none;
+}
+/* ----------------------------- */
+/* Thêm hình ảnh (album product) */
+.container {
+  max-width: 450px;
+}
+.imgGallery img {
+  padding: 8px;
+  max-width: 100px;
+}
+/* Danh sách hình ảnh product */
+.uploaded_image,
+.uploaded_image > img {
+  width: 95px;
+  height: 95px;
+}
+
+.uploaded_image {
+  float: left;
+  position: relative;
+  margin: 7px;
+}
+
+.uploaded_image > img {
+  position: absolute;
+  z-index: 0;
+}
+
+.img_rmv {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  padding: 22px;
+  width: 95px;
+  height: 95px;
+}
+
+.uploaded_image > img:hover + .img_rmv {
+  visibility: visible;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.img_rmv:hover {
+  visibility: visible;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none !important;
+}
